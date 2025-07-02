@@ -14,6 +14,5 @@ public interface StatisticasServico {
     StatisticasDTO calculaStatisticasPorPerioso( PeriodosDTO periodo);
     StatisticasDTO removeStatistica(LocalDateTime dataInicial, LocalDateTime dataFinal);
 
-
     Optional<Transacao> findLastTransacao();
 }

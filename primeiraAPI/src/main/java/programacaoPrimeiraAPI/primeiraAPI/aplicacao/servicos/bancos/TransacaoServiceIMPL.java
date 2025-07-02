@@ -1,4 +1,4 @@
-package programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.endPoints;
+package programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.bancos;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

@@ -1,4 +1,4 @@
-package programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.endPoints;
+package programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.bancos;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -79,11 +79,11 @@ public class StatisticaBanco  implements StatisticasServico{
             BigDecimal valor = transacao.getValor();
             sum = sum.add(valor);
 
-            if (min == null || min.compareTo(min) <0) {
+            if (min == null || valor.compareTo(min) <0) {
                 min = valor;
             }
 
-            if (max == null || max.compareTo(max) > 0) {
+            if (max == null || valor.compareTo(max) > 0) {
                 max = valor;
             }
         }

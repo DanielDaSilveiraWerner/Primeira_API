@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import programacaoPrimeiraAPI.primeiraAPI.aplicacao.dto.TransacaoDTO;
 import programacaoPrimeiraAPI.primeiraAPI.aplicacao.model.Transacao;
-import programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.endPoints.TransacaoServicoFactory;
+import programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.bancos.TransacaoServicoFactory;
 
 @RestController
 @RequestMapping("/transacao") 
@@ -62,7 +62,7 @@ public class ControlerTransacao {
           }   
 
           try {
-            transacaoServicoFactory.deletaPorPeriodoBancon(banco, dataFinal, dataInicial, senha);
+            transacaoServicoFactory.deletaPorPeriodoBancon(banco, dataInicial, dataFinal, senha);
             return ResponseEntity.noContent().build();
           } catch (RuntimeException e){
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.getMessage());

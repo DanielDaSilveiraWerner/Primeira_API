@@ -1,4 +1,4 @@
- package programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.endPoints;
+ package programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.bancos;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 
 import programacaoPrimeiraAPI.primeiraAPI.aplicacao.dto.TransacaoDTO;
 import programacaoPrimeiraAPI.primeiraAPI.aplicacao.model.Transacao;
-import programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.bancos.banco1;
-import programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.bancos.banco2;
-import programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.bancos.banco3;
 import programacaoPrimeiraAPI.primeiraAPI.aplicacao.servicos.interfaces.TransacaoServico;
 
 @Service
