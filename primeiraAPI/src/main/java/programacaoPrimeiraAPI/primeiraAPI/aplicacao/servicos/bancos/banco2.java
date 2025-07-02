@@ -23,7 +23,6 @@ public banco2 (TransacaoRepositorio repositorio){
 
     @Override
     public Transacao salvarTransacao(TransacaoDTO dto) {
-        // TODO Auto-generated method stub
         if (dto.getDataHora() == null || dto.getDataHora().getYear() != 2025) {
             return null;
         }
@@ -35,14 +34,12 @@ public banco2 (TransacaoRepositorio repositorio){
 
     @Override
     public List<Transacao> listarTransacoes() {
-        // TODO Auto-generated method stub
        return repositorio.listaTransacaos().stream().filter
        (t -> t.getValor().compareTo(new java.math.BigDecimal("1000.00"))<= 0).collect(Collectors.toList());
     }
 
     @Override
     public void deletarTodasTransacoes() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Para delar todas, use: deletarTodasTransacoes com esta senha 'BD2@456'");
     }
 

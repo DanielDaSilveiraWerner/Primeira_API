@@ -123,8 +123,6 @@ public class StatisticaBanco  implements StatisticasServico{
 
     @Override
     public Optional<Transacao> findLastTransacao() {
-        // TODO Auto-generated method stub
-
         Optional<Transacao> ultimaTransacao = repositorio.findLastTransacao();
 
         ultimaTransacao.ifPresentOrElse(t -> {

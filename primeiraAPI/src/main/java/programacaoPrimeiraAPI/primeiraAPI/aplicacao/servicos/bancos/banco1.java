@@ -22,7 +22,6 @@ public class banco1 implements TransacaoServico{
 
     @Override
     public Transacao salvarTransacao(TransacaoDTO dto) {
-        // TODO Auto-generated method stub
         if (dto.getValor().compareTo(new java.math.BigDecimal("5.00"))<0) {
             return null;
         }
@@ -41,7 +40,6 @@ public class banco1 implements TransacaoServico{
 
     @Override
     public void deletarTodasTransacoes() {
-            // TODO Auto-generated method stub
       LocalDateTime limit = LocalDateTime.now().minusYears(3);
       List<Transacao> antiga = repositorio.listaTransacaos().stream().filter
       (t -> t.getDataHora().isBefore(limit)).collect(Collectors.toList());
@@ -52,7 +50,6 @@ public class banco1 implements TransacaoServico{
 
     @Override
     public void deletarPorPeriodo(LocalDateTime inicio, LocalDateTime fim, String senha) {
-        // TODO Auto-generated method stub
       if (!"BD1@123".equals(senha)) {
         throw new RuntimeException("Senha errada");
 
